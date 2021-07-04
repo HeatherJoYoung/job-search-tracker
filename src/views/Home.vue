@@ -1,18 +1,37 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="row">
+      <recent-activity></recent-activity>
+      <progress-tracker></progress-tracker>
+    </div>
+    <div class="row">
+      <data-entry></data-entry>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import DataEntry from '@/components/DataEntry.vue'
+import ProgressTracker from '@/components/ProgressTracker.vue'
+import RecentActivity from '@/components/RecentActivity.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    DataEntry,
+    ProgressTracker,
+    RecentActivity
   }
 }
 </script>
+
+ <style lang="scss">
+  .home {
+    padding: 3em;
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+    }
+  }
+ </style>
