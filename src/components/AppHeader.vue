@@ -25,6 +25,7 @@ export default {
     color: white;
     display: flex;
     flex-direction: column;
+    height: 14%;
     justify-content: center;
     padding: 1rem;
     header {

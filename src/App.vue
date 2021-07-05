@@ -15,9 +15,13 @@ export default {
 
 
 <style lang="scss">
+body, html, #app {
+   height: 100vh;
+}
 body {
     margin: 0;
-    background-image: url("./assets/white-blue-green.jpg")
+    background-image: url("./assets/white-blue-green.jpg");
+    overflow: hidden;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

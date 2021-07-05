@@ -1,11 +1,13 @@
 <template>
   <div class="home">
     <div class="row">
-      <recent-activity></recent-activity>
-      <progress-tracker></progress-tracker>
-    </div>
-    <div class="row">
-      <data-entry></data-entry>
+      <div class="col left">
+        <recent-activity></recent-activity>
+        <data-entry></data-entry>
+      </div>
+      <div class="col right">
+        <progress-tracker></progress-tracker>
+      </div>
     </div>
   </div>
 </template>
@@ -27,11 +29,26 @@ export default {
 
  <style lang="scss">
   .home {
+    height: 86%;
     padding: 3em;
     .row {
       display: flex;
+      height: 100%;
       justify-content: space-between;
-      margin-top: 2rem;
+      width: 100%;
+      .col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-start;
+        padding: 0 1.5rem;
+        width: 36%;
+        &.left {
+          width: 64%;
+        }
+      }
+      #data-entry {
+        margin-top: 3rem;
+      }
     }
   }
  </style>
