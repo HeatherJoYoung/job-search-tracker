@@ -102,6 +102,11 @@ export default {
                 padding: 0 0.25rem;
                 position: relative;
                 bottom: 20%;
+            }
+            input {
+                width: 164px;
+            }
+            select {
                 width: 170px;
             }
         }

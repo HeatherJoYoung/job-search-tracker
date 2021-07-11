@@ -12,8 +12,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="a in recentActivities" :key="a.index">
-                    <td>{{a.date}}</td>
+                <tr v-for="a in recent" :key="a.index">
+                    <td v-html="`${a.date.getMonth()}/${a.date.getDate()}/${a.date.getFullYear()}`"></td>
                     <td>{{a.activityType}}</td>
                     <td>{{a.contact}}</td>
                     <td>{{a.company}}</td>
@@ -28,7 +28,9 @@
 <script>
 export default {
   name: 'RecentActivity',
-
+  props: {
+      recent: Array
+  }
 }
 </script>
 
